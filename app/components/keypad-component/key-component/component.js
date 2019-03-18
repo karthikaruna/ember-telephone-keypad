@@ -1,0 +1,1 @@
+export { default } from 'ember-telephone-keypad/components/keypad-component/key-component/component';
