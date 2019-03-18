@@ -6,10 +6,10 @@
 <ul class="keys">
   {{! 1 - 9 }}
   {{#each-in keys as |number alphabets|}}
-    {{component "key-component" number=number alphabets=alphabets}}
+    {{keypad-component/key-component number=number alphabets=alphabets}}
   {{/each-in}}
   {{! last row }}
-  {{component "key-component" number="*"}}
-  {{component "key-component" number=0 alphabets="+"}}
-  {{component "key-component" number="#"}}
+  {{keypad-component/key-component number="*"}}
+  {{keypad-component/key-component number=0 alphabets="+"}}
+  {{keypad-component/key-component number="#"}}
 </ul>
