@@ -21,7 +21,9 @@ export default Component.extend({
   }),
 
   displayKeypressHandler(event) {
-    const pattern = /[\d*+#]/;
+    const pattern = this.get('usageIntention') === 'DIAL'
+      ? /[\d*+#]/
+      : /[\d*#]/;
 
     event.preventDefault();
 

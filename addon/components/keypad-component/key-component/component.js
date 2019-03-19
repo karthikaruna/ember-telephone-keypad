@@ -6,7 +6,7 @@ export default Component.extend({
   tagName: 'li',
 
   click() {
-    if (this.get('number') === '0') {
+    if (this.get('number') === '0' && this.get('usageIntention') === 'DIAL') {
       if (this.get('isLongPressed')) {
         this.onPress('+');
         return;
