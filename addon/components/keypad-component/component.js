@@ -57,6 +57,10 @@ export default Component.extend({
       if (this.get('targetDisplay')) {
         const targetDisplay = document.querySelector(this.get('targetDisplay'));
         targetDisplay.value = (targetDisplay.value || '') + key;
+
+        if (this.get('targetEvent')) {
+          targetDisplay.dispatchEvent(new Event(this.get('targetEvent'), { bubbles: true }));
+        }
       }
 
       this.keyPressCallback(key);
