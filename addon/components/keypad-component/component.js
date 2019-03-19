@@ -20,6 +20,32 @@ export default Component.extend({
     }
   }),
 
+  displayKeypressHandler(event) {
+    const pattern = /[\d*#]/;
+
+    event.preventDefault();
+    
+    if (pattern.test(event.key)) {
+      this.send('onKeyPress', event.key);
+    }
+  },
+
+  didInsertElement() {
+    this._super(...arguments);
+
+    if (this.get('showDisplay')) {
+      this.set('_displayKeypressHandler', this.displayKeypressHandler.bind(this));
+      this.$('input').on('keypress', this._displayKeypressHandler);
+    }
+  },
+  willDestroyElement() {
+    this._super(...arguments);
+
+    if (this.get('showDisplay')) {
+      this.$('input').off('keypress', this._displayKeypressHandler);
+    }
+  },
+
   actions: {
     onKeyPress(key) {
       if (this.get('showDisplay')) {
