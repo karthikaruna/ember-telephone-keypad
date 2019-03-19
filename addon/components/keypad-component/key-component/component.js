@@ -4,5 +4,8 @@ import layout from './template';
 export default Component.extend({
   layout,
   tagName: 'li',
-  classNames: ['key']
+
+  click() {
+    this.onPress(this.get('number'));
+  }
 });

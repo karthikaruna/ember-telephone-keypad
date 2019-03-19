@@ -18,5 +18,15 @@ export default Component.extend({
         9: 'WXYZ'
       };
     }
-  })
+  }),
+
+  actions: {
+    onKeyPress(key) {
+      if (this.get('showDisplay')) {
+        this.set('displayValue', (this.get('displayValue') || '') + key);
+      }
+
+      this.keyPressCallback(key);
+    }
+  }
 });

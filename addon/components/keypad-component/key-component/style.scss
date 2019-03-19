@@ -3,9 +3,11 @@ $cell-border: 1px solid #f2f2f2;
 & {
 	display: flex;
 	align-items: baseline;
-	width: 100 / 3 * 1%;
+	flex-basis: 100 / 3 * 1%;
 	border-top: $cell-border;
 	border-right: $cell-border;
+	font-size: 24px;
+	cursor: pointer;
 
 	&:nth-last-child(-n + 3) {
 		border-bottom: $cell-border;
@@ -13,6 +15,10 @@ $cell-border: 1px solid #f2f2f2;
 
 	&:nth-child(3n - 2) {
 		border-left: $cell-border;
+	}
+
+	&:hover {
+		background-color: #f0f0f0;
 	}
 }
 span {
@@ -22,13 +28,13 @@ span {
 
 	&.number {
 		color: black;
-		font-size: 24px;
+		font-size: 100%;
 		justify-content: flex-end;
 		padding-right: 3px;
 	}
 	&.alphabets {
 		color: #bbbbbb;
-		font-size: 10px;
+		font-size: percentage(10 / 24);
 		padding-left: 3px;
 	}
 }
