@@ -21,10 +21,10 @@ export default Component.extend({
   }),
 
   displayKeypressHandler(event) {
-    const pattern = /[\d*#]/;
+    const pattern = /[\d*+#]/;
 
     event.preventDefault();
-    
+
     if (pattern.test(event.key)) {
       this.send('onKeyPress', event.key);
     }
