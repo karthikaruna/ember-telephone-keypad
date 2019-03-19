@@ -54,6 +54,11 @@ export default Component.extend({
         this.set('displayValue', (this.get('displayValue') || '') + key);
       }
 
+      if (this.get('targetDisplay')) {
+        const targetDisplay = document.querySelector(this.get('targetDisplay'));
+        targetDisplay.value = (targetDisplay.value || '') + key;
+      }
+
       this.keyPressCallback(key);
     }
   }
