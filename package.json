@@ -25,7 +25,7 @@
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^10.0.0",
-    "ember-component-css": "^0.6.7",
+    "ember-component-css": "0.1.9",
     "sass": "^1.17.3"
   },
   "devDependencies": {
