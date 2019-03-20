@@ -1,3 +1,9 @@
+{{#if showClose}}
+  <h6>
+    {{title}}
+    <span {{action "onKeypadClose"}}>&times;</span>
+  </h6>
+{{/if}}
 {{#if showDisplay}}
   {{input value=displayValue class="keypad-display"}}
 {{/if}}

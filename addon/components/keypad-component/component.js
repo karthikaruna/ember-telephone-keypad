@@ -64,6 +64,9 @@ export default Component.extend({
       }
 
       this.keyPressCallback(key);
+    },
+    onKeypadClose() {
+      this.keypadCloseCallback();
     }
   }
 });
