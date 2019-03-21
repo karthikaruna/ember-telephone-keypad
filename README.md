@@ -1,50 +1,26 @@
-ember-telephone-keypad
-==============================================================================
+# Ember-telephone-keypad
 
-[Short description of the addon.]
+This README outlines the details of collaborating on this Ember addon.
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
-```
-ember install ember-telephone-keypad
-```
-
-
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-### Installation
-
-* `git clone <repository-url>`
-* `cd ember-telephone-keypad`
+* `git clone` this repository
 * `npm install`
+* `bower install`
 
-### Linting
+## Running
 
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `ember server`
+* Visit your app at http://localhost:4200.
 
-### Running tests
+## Running Tests
 
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
+* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
+* `ember test`
+* `ember test --server`
 
-### Running the dummy application
+## Building
 
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+* `ember build`
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
