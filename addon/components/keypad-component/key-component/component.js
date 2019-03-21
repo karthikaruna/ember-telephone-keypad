@@ -1,7 +1,6 @@
-import Component from '@ember/component';
 import layout from './template';
 
-export default Component.extend({
+export default Ember.Component.extend({
   layout,
   tagName: 'li',
 
