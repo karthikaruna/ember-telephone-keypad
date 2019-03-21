@@ -4,6 +4,7 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
   layout,
+  classNames: ['keypad-component'],
   keys: computed({
     get() {
       return {

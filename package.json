@@ -1,6 +1,6 @@
 {
   "name": "ember-telephone-keypad",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
@@ -23,10 +23,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-sass": "^10.0.0",
-    "ember-component-css": "^0.6.7",
-    "sass": "^1.17.3"
+    "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",

@@ -4,6 +4,7 @@ import layout from './template';
 export default Component.extend({
   layout,
   tagName: 'li',
+  classNames: ['key-component'],
 
   click() {
     if (this.get('number') === '0' && this.get('usageIntention') === 'DIAL') {
