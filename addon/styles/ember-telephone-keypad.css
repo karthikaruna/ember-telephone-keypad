@@ -1,0 +1,74 @@
+/* keypad-component */
+.keypad-component .keypad-keys {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	background-color: white;
+}
+
+.keypad-component .keypad-display {
+	color: black;
+	font-size: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #f2f2f2;
+}
+
+.keypad-component h6 {
+	color: #808080;
+	background-color: #f2f2f2;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 5px 10px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.keypad-component h6 span {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* key-component */
+.key-component {
+	display: flex;
+	align-items: baseline;
+	flex-basis: calc(100 / 3 * 1%);
+	border-top: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.key-component:nth-last-child(-n + 3) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.key-component:nth-child(3n - 2) {
+  border-left: 1px solid #f2f2f2;
+}
+
+.key-component:hover {
+  background-color: #f0f0f0;
+}
+
+.key-component span {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.key-component span.number {
+  color: black;
+  font-size: 100%;
+  justify-content: flex-end;
+  padding-right: 3px;
+}
+
+.key-component span.alphabets {
+  color: #bbbbbb;
+  font-size: calc(10 / 24 * 100%);
+  padding-left: 3px;
+}
