@@ -9,6 +9,7 @@
 
 .keypad-component .keypad-display {
 	color: black;
+	background-color: white;
 	font-size: 20px;
 	height: 40px;
 	padding: 10px;
