@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import layout from './template';
 import { computed } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
 
 export default Component.extend({
   layout,
@@ -18,6 +19,17 @@ export default Component.extend({
         8: 'TUV',
         9: 'WXYZ'
       };
+    }
+  }),
+  focusDisplay: computed({
+    get() { },
+    set(key, value) {
+      if (this.get('showDisplay') && value) {
+        scheduleOnce('afterRender', this, function () {
+          this.$('input').focus();
+        });
+      }
+      return value;
     }
   }),
 
