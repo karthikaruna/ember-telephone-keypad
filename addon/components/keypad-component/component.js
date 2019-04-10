@@ -50,7 +50,9 @@ export default Component.extend({
 
     if (this.get('showDisplay')) {
       this.set('_displayKeypressHandler', this.displayKeypressHandler.bind(this));
-      this.$('input').on('keypress', this._displayKeypressHandler);
+      this.$('input')
+        .on('keypress', this._displayKeypressHandler)
+        .on('paste', event => event.preventDefault());
     }
   },
   willDestroyElement() {
@@ -65,6 +67,7 @@ export default Component.extend({
     onKeyPress(key) {
       if (this.get('showDisplay')) {
         this.set('displayValue', (this.get('displayValue') || '') + key);
+        this.$('input').focus();
       }
 
       if (this.get('targetDisplay')) {
@@ -74,6 +77,8 @@ export default Component.extend({
         if (this.get('targetEvent')) {
           targetDisplay.dispatchEvent(new Event(this.get('targetEvent'), { bubbles: true }));
         }
+
+        targetDisplay.focus();
       }
 
       this.keyPressCallback(key);
