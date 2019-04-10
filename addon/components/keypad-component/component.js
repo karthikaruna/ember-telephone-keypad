@@ -44,22 +44,29 @@ export default Component.extend({
       this.send('onKeyPress', event.key);
     }
   },
+  pasteHandler(event) {
+    event.preventDefault();
+  },
 
   didInsertElement() {
     this._super(...arguments);
 
     if (this.get('showDisplay')) {
       this.set('_displayKeypressHandler', this.displayKeypressHandler.bind(this));
+      this.set('_pasteHandler', this.pasteHandler.bind(this));
+      
       this.$('input')
         .on('keypress', this._displayKeypressHandler)
-        .on('paste', event => event.preventDefault());
+        .on('paste', this._pasteHandler);
     }
   },
   willDestroyElement() {
     this._super(...arguments);
 
     if (this.get('showDisplay')) {
-      this.$('input').off('keypress', this._displayKeypressHandler);
+      this.$('input')
+        .off('keypress', this._displayKeypressHandler)
+        .off('paste', this._pasteHandler);
     }
   },
 
