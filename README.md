@@ -1,9 +1,9 @@
 ember-telephone-keypad
 ==============================================================================
 
-A simple 3x4 telephone keypad 
+A simple 3x4 telephone keypad.
 
-![screenshot](screenshots/screenshot.png).
+![screenshot](screenshots/screenshot.png)
 
 Installation
 ------------------------------------------------------------------------------
