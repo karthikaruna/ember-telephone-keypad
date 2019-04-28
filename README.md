@@ -1,7 +1,7 @@
 ember-telephone-keypad
 ==============================================================================
 
-[Short description of the addon.]
+A simple 3x4 telephone keypad (checkout ![screenshot] (screenshots/screenshot.png)).
 
 Installation
 ------------------------------------------------------------------------------
@@ -14,35 +14,21 @@ ember install ember-telephone-keypad
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Place `{{keypad-component}}` where you need the keypad to be rendered.
+
+The following parameters are available.
+<ul>
+  <li>`title`: string - If you want to provide a title</li>
+  <li>`showClose`: boolean - If you want &times; to be displayed</li>
+  <li>`keypadCloseCallback`: action - This action will be called when &times; is clicked</li>
+  <li>`showDisplay`: boolean - An `input` where the pressed keys are displayed is rendered above the keypad</li>
+  <li>`focusDisplay`: boolean - The above `input` will be focussed on initial render</li>
+  <li>`targetDisplay`: selector - An `input` in your app to display the keys pressed</li>
+  <li>`targetEvent`: string - The event to dispatch from the above display on keypress</li>
+  <li>`keyPressCallback`: action - This action will be called with the key pressed</li>
+</ul>
 
 
-Contributing
-------------------------------------------------------------------------------
-
-### Installation
-
-* `git clone <repository-url>`
-* `cd ember-telephone-keypad`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 License
 ------------------------------------------------------------------------------
